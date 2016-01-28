@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true" android:id="@+id/coord_layout">
+
+    <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <com.example.xyzreader.ui.XyzAppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:expanded="true"
+
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="0dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:contentScrim="@android:color/transparent"
+            app:expandedTitleMarginEnd="16dp"
+            app:expandedTitleMarginStart="16dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+            <com.example.xyzreader.ui.DynamicHeightNetworkImageView
+                android:id="@+id/image_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:scaleType="centerCrop"
+                android:transitionName="@string/image_transition" />
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+
+                android:elevation="8dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+        <View
+            android:id="@+id/appbar_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#606060"
+            android:visibility="visible"/>
+    </com.example.xyzreader.ui.XyzAppBarLayout>
+
+
+    <!--</FrameLayout>-->
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/ns_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/text_views"
+            android:orientation="vertical" android:elevation="8dp">
+
+            <TextView
+                android:id="@+id/id_text_title"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp" />
+
+
+            <TextView xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/article_body"
+                style="@style/Base.TextAppearance.AppCompat.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                tools:text="Sample Text\n Sample Text" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:clickable="true"
+        android:src="@drawable/ic_share"
+        app:layout_anchor="@id/ns_view"
+        android:background="?colorAccent"
+        app:layout_anchorGravity="bottom|right|end" />
+
+</android.support.design.widget.CoordinatorLayout>

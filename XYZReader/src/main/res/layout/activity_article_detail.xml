@@ -1,0 +1,25 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<FrameLayout-->
+        <!--android:id="@+id/up_container"-->
+        <!--android:background="@android:color/transparent"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="?actionBarSize">-->
+
+        <!--&lt;!&ndash;<ImageButton&ndash;&gt;-->
+            <!--&lt;!&ndash;android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/action_up"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="56dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="?actionBarSize"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:background="?selectableItemBackgroundBorderless"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:contentDescription="@string/up"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:src="@drawable/ic_arrow_back" />&ndash;&gt;-->
+    <!--</FrameLayout>-->
+</FrameLayout>
